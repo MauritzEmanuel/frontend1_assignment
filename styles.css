@@ -1,0 +1,296 @@
+body{
+    display: flex;
+    align-items: center;
+    /*justify-content: center;*/
+    flex-direction: column;
+    background-color: darkgreen;
+    margin: 0;
+}
+
+.navbar{
+    display: flex;
+    width: 100%;
+    background-color: antiquewhite;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.navbar div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+}
+
+#MatLink, #HemLink, #DryckLink {
+    color: black;
+}
+
+#MatLink:hover, #HemLink:hover, #DryckLink:hover {
+    color: red;
+}
+
+Title{
+    order: 1;
+    margin: 0;
+}
+
+.empty-div {
+    width: 10px;
+    padding-right: 10px;
+}
+
+#Title, .empty-div , .navbar div {
+    width: 240px;
+}
+
+#Title{
+    font-family: "Bodoni MT Condensed";
+    font-size: 40px;
+    padding-left: 10px;
+    color: black;
+    text-shadow: -1px -1px 1px red, 1px -1px 1px red, -1px 1px 1px red, 1px 1px 1px red;
+}
+
+.botten{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 200px;
+    background-color: darkred;
+    margin-top: auto;
+}
+
+.Bilder{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 50px;
+}
+
+.ResturangBild {
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    padding-top: 1em;
+    width: 100%;
+    height:900px;
+}
+.Resturang{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.HemText{
+    position: absolute;
+    font-size: 70px;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black; /* Ange textfärg här */
+    text-shadow: -2px -2px 2px white, 2px -2px 2px white, -2px 2px 2px white, 2px 2px 2px white;
+    text-align: center;
+}
+
+.menuButton{
+    cursor: pointer;
+    background-color: antiquewhite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 3em;
+    width: 20em;
+    border-radius: 20px;
+}
+
+.menuButton:hover{
+    background-color: limegreen;
+}
+
+.drinkButton:hover{
+    background-color: white;
+}
+
+.aboutButton:hover, .bookingButton:hover{
+    background-color: red;
+}
+
+.drinkButton{
+    cursor: pointer;
+    background-color: antiquewhite;
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 3em;
+    width: 20em;
+    border-radius: 20px;
+}
+
+.aboutButton{
+    cursor: pointer;
+    background-color: antiquewhite;
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 3em;
+    width: 20em;
+    border-radius: 20px;
+}
+
+.Pasta, .Pizza {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    height: 450px;
+}
+
+.PastaText, .PizzaText {
+    position: absolute;
+    font-size: 70px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    text-shadow: -2px -2px 2px white, 2px -2px 2px white, -2px 2px 2px white, 2px 2px 2px white;
+}
+
+.tablePicture{
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.bookingButton{
+    cursor: pointer;
+    background-color: antiquewhite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 3em;
+    width: 20em;
+    border-radius: 20px;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+    margin-top: 4em;
+    padding-top: 4em;
+    background-color: antiquewhite;
+}
+
+.menuTitle{
+    font-size: xxx-large;
+}
+
+.menuContent{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.foodClass, .drinkClass{
+    margin-top: 2em;
+}
+
+.foodName, .foodDescription, .drinkName, .drinkDescription, .price{
+    margin-top: 1em;
+}
+
+.popup .overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background:rgba(0,0,0,0.7);
+    z-index: 1;
+    display: none;
+}
+
+.popup .content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%) scale(0);
+    background: #fff;
+    width: 600px;
+    height: 350px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 40px;
+}
+
+.popup .close-btn{
+    cursor:pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background:#222;
+    color: #fff;
+    font-weight: 600;
+    line-height: 30px;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.popup.active .overlay{
+    display: block;
+}
+
+.popup.active .content{
+    transition:all 300ms ease-in-out;
+    transform:translate(-50%,-50%) scale(1);
+}
+
+#contactForm{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#contactForm input{
+    margin-left: 5px;
+    align-self: center;
+    height: 1em;
+    width: 10em;
+}
+
+.firstname, .lastname, .email, .phoneNumber, .group, .date{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#groupQuantity{
+    margin-left: 5px;
+    align-self: center;
+    height: 1em;
+    width: 4em;
+}
+
+#submitButton{
+    cursor: pointer;
+    margin-top: 10px;
+    width: 15em;
+    height: 4em;
+    border-radius: 40px;
+}

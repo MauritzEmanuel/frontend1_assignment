@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+</head>
+<body>
+
+<nav class="navbar">
+    <h1 id="Title">Ristorante Milano</h1>
+    <div>
+        <a href="index.html">
+            <svg id="HemLink" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home-2" width="80" height="80" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+                <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                <path d="M10 12h4v4h-4z" />
+            </svg>
+        </a>
+
+        <a href="foodMenu.html">
+            <svg id="MatLink" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pizza" width="80" height="80" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983z" />
+                <path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479" />
+                <path d="M13 11.01v-.01" />
+                <path d="M11 14v-.01" />
+            </svg>
+        </a>
+
+        <a href="drinkMenu.html">
+            <svg id="DryckLink" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-beer" width="80" height="80" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M9 21h6a1 1 0 0 0 1 -1v-3.625c0 -1.397 .29 -2.775 .845 -4.025l.31 -.7c.556 -1.25 .845 -2.253 .845 -3.65v-4a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v4c0 1.397 .29 2.4 .845 3.65l.31 .7a9.931 9.931 0 0 1 .845 4.025v3.625a1 1 0 0 0 1 1z" />
+                <path d="M6 8h12" />
+            </svg>
+        </a>
+    </div>
+
+    <div class="empty-div"></div>
+</nav>
+
+
+<div class="ResturangBild">
+    <img class="Resturang" src="https://thatsup.website/storage/160/7943/trattoria_villa_romana_14.jpg?v=1649770019">
+    <div class="HemText">Välkommen till oss på Ristorante Milano!</div>
+    <a href="foodMenu.html">
+        <button class="menuButton">Meny</button>
+    </a>
+    <a href="drinkMenu.html">
+        <button class="drinkButton">Dryck</button>
+    </a>
+    <button onclick="togglePopup_About()" class="aboutButton">Om oss</button>
+</div>
+
+<div class="popup" id="popup-2">
+    <div class="overlay"></div>
+    <div class="content">
+        <div class="close-btn" onclick="togglePopup_About()">&times;</div>
+        <h1>Om oss</h1>
+        <p>Välkommen till Ristorante Milano, en pärla i hjärtat av Uppsala. Vi är stolta över att erbjuda en autentisk italiensk matupplevelse, där varje rätt är skapad med omsorg och kärlek. Vår noggrant utvalda vinlista kompletterar perfekt våra delikata rätter. På Ristorante Milano strävar vi efter att skapa en atmosfär där gäster känner sig som hemma och njuter av varje stund. Vår passion för traditionell italiensk mat och gästfrihet genomsyrar varje aspekt av vår restaurang. Oavsett om du är här för en romantisk middag, familjefest eller affärslunch, är vi dedikerade till att göra varje besök minnesvärt. Tack för att du väljer att dela dina stunder med oss på Ristorante Milano.</p>
+        <p>Buon Appetito!</p>
+
+        <h4>Hörnelundsgatan 12, 753 27 Uppsala, Sverige</h4>
+        </div>
+
+    </div>
+</div>
+
+<div class="Bilder">
+    <div class="Pasta">
+        <img src="https://a.cdn-hotels.com/gdcs/production157/d1391/905cf8e9-0b7d-4572-9ecf-a38f10e89a60.jpg" width="700px" height="450px">
+        <div class="PastaText">Pasta</div>
+    </div>
+    <div class="Pizza">
+        <img src="https://images.aftonbladet-cdn.se/v2/images/905f3eda-fe41-48f9-a5e0-1b285354d9e8?fit=crop&format=auto&h=675&q=50&w=900&s=ed11f9e68401cf8854072aee0f7324cba470d6db" width="700px" height="450px">
+        <div class="PizzaText">Pizza</div>
+    </div>
+    <div class="tablePicture">
+       <img class="Bord" src="https://cdn.cafe.se/app/uploads/2018/01/italienska-restauranger.jpg" width="900px" height="500px">
+        <button onclick="togglePopup_Booking()" class="bookingButton">Boka bord</button>
+    </div>
+</div>
+
+<div class="popup" id="popup-1">
+    <div class="overlay"></div>
+    <div class="content">
+        <div class="close-btn" onclick="togglePopup_Booking()">&times;</div>
+        <h1>Boka bord</h1>
+
+
+        <form id="contactForm">
+            <div class="firstname">
+                <h3>Förnamn:</h3>
+                <input id="firstName" type="text" placeholder="Ange förnamn..." required>
+            </div>
+
+            <div class="lastname">
+                <h3>Efternamn:</h3>
+                <input id="lastName" type="text" placeholder="Ange efternamn..." required>
+            </div>
+
+            <!-- Ny rad -->
+            <div class="email">
+                <h3>E-post:</h3>
+                <input id="email" type="text" placeholder="example@domain.com" required>
+            </div>
+
+            <div class="phoneNumber">
+                <h3>Telefonnummer:</h3>
+                <input id="phoneNumber" type="text" placeholder="ex +46xxxxxxxxx" required>
+            </div>
+
+            <!-- Ny rad -->
+            <div class="group">
+                <h3>Antal gäster:</h3>
+                <input id="groupQuantity" type="number" name="quantity" min="1" max="10" required>
+            </div>
+
+            <div class="date">
+                <h3>Datum:</h3>
+                <input id="date" type="date" required>
+            </div>
+
+            <button id="submitButton" type="button" onclick="saveContact()">Boka</button>
+
+
+<!--        <div class="contactForm">-->
+<!--            <div class="firstname">-->
+<!--                <h3>Förnamn:</h3>-->
+<!--                <input type="text" placeholder="Ange förnamn..."/>-->
+<!--            </div>-->
+
+<!--            <div class="lastname">-->
+<!--                <h3>Efternamn:</h3>-->
+<!--                <input type="text" placeholder="Ange efternamn..."/>-->
+<!--            </div>-->
+
+<!--            &lt;!&ndash; Ny rad &ndash;&gt;-->
+<!--            <div class="email">-->
+<!--                <h3>E-post:</h3>-->
+<!--                <input type="text" placeholder="example@domain.com" />-->
+<!--            </div>-->
+
+<!--            <div class="phoneNumber">-->
+<!--                <h3>Telefonnummer:</h3>-->
+<!--                <input type="text" placeholder="ex +46xxxxxxxxx" />-->
+<!--            </div>-->
+
+<!--            &lt;!&ndash; Ny rad &ndash;&gt;-->
+<!--            <div class="group">-->
+<!--                <h3>Antal gäster:</h3>-->
+<!--                <input id="groupQuantity" type="number" name="quantity" min="1" max="10" />-->
+<!--            </div>-->
+
+<!--            <div class="date">-->
+<!--                <h3>Datum:</h3>-->
+<!--                <input type="date">-->
+<!--            </div>-->
+
+<!--            <input id="submitButton" type="submit">-->
+
+
+
+        </form>
+
+    </div>
+</div>
+
+<div id="output"></div>
+
+<div class="botten">
+    <div>
+        <h4>Address:</h4>
+        <p>Hörnelundsgatan 12</p>
+        <p>753 27</p>
+        <p>Uppsala, Sverige</p>
+    </div>
+    <div>
+        <h4>Öppettider:</h4>
+        <p>Måndag till lördag: 12:00 - 23:00</p>
+        <p>Söndag: Stängt</p>
+    </div>
+    <div>
+        <h4>Kontakt:</h4>
+        <p>Telefon: +46 18 123 456</p>
+        <p>E-post: info@ristorantemilano.se</p>
+    </div>
+</div>
+
+</body>
+</html>
